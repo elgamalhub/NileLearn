@@ -394,7 +394,7 @@ public class PaymentService : IPaymentService
         }
     }
 
-    private async Task GenerateInvoiceForOrderAsync(Order order, CancellationToken ct)
+    private Task GenerateInvoiceForOrderAsync(Order order, CancellationToken ct)
     {
         var invoiceNumber = $"INV-{DateTime.UtcNow:yyyyMM}-{Guid.NewGuid():N}"[..18].ToUpper();
         var invoice = new Invoice
@@ -409,6 +409,7 @@ public class PaymentService : IPaymentService
             PdfDownloadUrl = $"/api/v1/invoices/{order.Id}/download"
         };
         _context.Invoices.Add(invoice);
+        return Task.CompletedTask;
     }
 
     private IPaymentGateway GetGateway(PaymentGatewayType type)

@@ -25,16 +25,16 @@ jobs:
           dotnet-version: "8.0.x"
 
       - name: Restore
-        run: dotnet restore src/NileLearn.Api/NileLearn.Api.csproj
+        run: dotnet restore NileLearn.sln
 
       - name: Build
-        run: dotnet build src/NileLearn.Api/NileLearn.Api.csproj --no-restore -c Release
+        run: dotnet build NileLearn.sln --no-restore -c Release
 
       - name: Test (unit)
-        run: dotnet test tests/NileLearn.UnitTests/NileLearn.UnitTests.csproj -c Release --no-restore --logger "trx;LogFileName=unit.trx"
+        run: dotnet test tests/NileLearn.UnitTests/NileLearn.UnitTests.csproj -c Release --no-build --no-restore --logger "trx;LogFileName=unit.trx"
 
       - name: Test (integration)
-        run: dotnet test tests/NileLearn.IntegrationTests/NileLearn.IntegrationTests.csproj -c Release --no-restore --logger "trx;LogFileName=integration.trx"
+        run: dotnet test tests/NileLearn.IntegrationTests/NileLearn.IntegrationTests.csproj -c Release --no-build --no-restore --logger "trx;LogFileName=integration.trx"
 
       - name: Upload test results
         if: always()

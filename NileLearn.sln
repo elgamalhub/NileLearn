@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{32A2BD58-8EFE-4C51-8AAE-BCE7E9A03075}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NileLearn.Domain", "src\NileLearn.Domain\NileLearn.Domain.csproj", "{B27E3535-0BCA-4401-AE0B-39F80B5ABB19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NileLearn.Application", "src\NileLearn.Application\NileLearn.Application.csproj", "{706FE0E9-A8CF-4850-852D-29448EE5D49F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NileLearn.Infrastructure", "src\NileLearn.Infrastructure\NileLearn.Infrastructure.csproj", "{6FE0ED6E-9EFE-4EDE-8F07-54BBE3ED5D96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NileLearn.Api", "src\NileLearn.Api\NileLearn.Api.csproj", "{1F5DD5AE-E92D-400C-A229-7559A5DBB4D1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{1937E798-7CCD-47B4-AC60-1468B444E799}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NileLearn.UnitTests", "tests\NileLearn.UnitTests\NileLearn.UnitTests.csproj", "{4DF0D706-E77E-4E6D-8C8C-CCE577D5917C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NileLearn.IntegrationTests", "tests\NileLearn.IntegrationTests\NileLearn.IntegrationTests.csproj", "{3D3D8D16-49C9-4AA2-821C-6EC589C719DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B27E3535-0BCA-4401-AE0B-39F80B5ABB19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B27E3535-0BCA-4401-AE0B-39F80B5ABB19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B27E3535-0BCA-4401-AE0B-39F80B5ABB19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B27E3535-0BCA-4401-AE0B-39F80B5ABB19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{706FE0E9-A8CF-4850-852D-29448EE5D49F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{706FE0E9-A8CF-4850-852D-29448EE5D49F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{706FE0E9-A8CF-4850-852D-29448EE5D49F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{706FE0E9-A8CF-4850-852D-29448EE5D49F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FE0ED6E-9EFE-4EDE-8F07-54BBE3ED5D96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FE0ED6E-9EFE-4EDE-8F07-54BBE3ED5D96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FE0ED6E-9EFE-4EDE-8F07-54BBE3ED5D96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FE0ED6E-9EFE-4EDE-8F07-54BBE3ED5D96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F5DD5AE-E92D-400C-A229-7559A5DBB4D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F5DD5AE-E92D-400C-A229-7559A5DBB4D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F5DD5AE-E92D-400C-A229-7559A5DBB4D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F5DD5AE-E92D-400C-A229-7559A5DBB4D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DF0D706-E77E-4E6D-8C8C-CCE577D5917C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DF0D706-E77E-4E6D-8C8C-CCE577D5917C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DF0D706-E77E-4E6D-8C8C-CCE577D5917C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DF0D706-E77E-4E6D-8C8C-CCE577D5917C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D3D8D16-49C9-4AA2-821C-6EC589C719DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D3D8D16-49C9-4AA2-821C-6EC589C719DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D3D8D16-49C9-4AA2-821C-6EC589C719DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D3D8D16-49C9-4AA2-821C-6EC589C719DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B27E3535-0BCA-4401-AE0B-39F80B5ABB19} = {32A2BD58-8EFE-4C51-8AAE-BCE7E9A03075}
+		{706FE0E9-A8CF-4850-852D-29448EE5D49F} = {32A2BD58-8EFE-4C51-8AAE-BCE7E9A03075}
+		{6FE0ED6E-9EFE-4EDE-8F07-54BBE3ED5D96} = {32A2BD58-8EFE-4C51-8AAE-BCE7E9A03075}
+		{1F5DD5AE-E92D-400C-A229-7559A5DBB4D1} = {32A2BD58-8EFE-4C51-8AAE-BCE7E9A03075}
+		{4DF0D706-E77E-4E6D-8C8C-CCE577D5917C} = {1937E798-7CCD-47B4-AC60-1468B444E799}
+		{3D3D8D16-49C9-4AA2-821C-6EC589C719DC} = {1937E798-7CCD-47B4-AC60-1468B444E799}
+	EndGlobalSection
+EndGlobal

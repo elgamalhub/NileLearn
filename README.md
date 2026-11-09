@@ -123,7 +123,7 @@ Dependencies point inward. The domain has no dependency on EF Core or ASP.NET Co
 
 ```
 .
-├── NileLearn.slnx
+├── NileLearn.sln
 ├── Dockerfile
 ├── docker-compose.yml
 ├── .env.example
