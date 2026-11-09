@@ -1,0 +1,26 @@
+services:
+  nilelearn-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nilelearn-api:latest
+    container_name: nilelearn-api
+    ports:
+      - "8080:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      USESQLITE: "true"
+      JWT__SECRETKEY: "${JWT__SECRETKEY:-dev-only-change-this-secret-key-min-32-chars-long}"
+      STORAGE__UPLOADPATH: /app/AppData/Uploads
+    volumes:
+      - nilelearn-data:/app/AppData
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+volumes:
+  nilelearn-data:

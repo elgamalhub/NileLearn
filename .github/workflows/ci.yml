@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    name: Build & test (.NET 8)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Restore
+        run: dotnet restore src/NileLearn.Api/NileLearn.Api.csproj
+
+      - name: Build
+        run: dotnet build src/NileLearn.Api/NileLearn.Api.csproj --no-restore -c Release
+
+      - name: Test (unit)
+        run: dotnet test tests/NileLearn.UnitTests/NileLearn.UnitTests.csproj -c Release --no-restore --logger "trx;LogFileName=unit.trx"
+
+      - name: Test (integration)
+        run: dotnet test tests/NileLearn.IntegrationTests/NileLearn.IntegrationTests.csproj -c Release --no-restore --logger "trx;LogFileName=integration.trx"
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: "**/*.trx"
+          if-no-files-found: ignore
